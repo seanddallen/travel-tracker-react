@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './css/index.css';
+import Login from './components/Login';
 import Dashboard from './components/Dashboard';
-import Header from './components/Header';
-import Main from './components/Main';
-import Footer from './components/Footer';
+import Header from './components/partials/Header';
+import Footer from './components/partials/Footer';
 import { BrowserRouter, Route } from 'react-router-dom'
 
 class App extends Component {
@@ -12,7 +12,7 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <Header />
-          <Route path="/login" />
+          <Route path="/login" component={Login} />
           <Route path="/dashboard" component={Dashboard} />
           {/* <Footer /> */}
         </div>

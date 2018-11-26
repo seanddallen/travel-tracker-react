@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
-import Sidenav from './Sidenav'
+import Sidenav from './partials/Sidenav'
+import Account from './Account'
+import Progress from './Progress'
+import MapUS from './MapUS'
+import MapWorld from './MapWorld'
+import ListAlphabetic from './ListAlphabetic'
+import ListSortable from './ListSortable'
+
 // import { fetchCameras } from '../redux/actions/camerasActions'
+import { Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 class Dashboard extends Component {
@@ -11,11 +19,13 @@ class Dashboard extends Component {
       <div className="flex">
         <Sidenav />
 
-        {/* <Route path={`${match.path}/:id`} path="/dashboard/usmap/user/:id" component={usmap}/>
-        <Route path="/worldmap" component={usmap}/>
-        <Route path="/usmap" component={usmap}/>
-        <Route path="/usmap" component={usmap}/>
-        <Route path="/usmap" component={usmap}/> */}
+        {/* //Change endpoint to /:userid (after Auth) */}
+        <Route path="/dashboard/account" component={Account}/>
+        <Route path="/dashboard/progress" component={Progress}/>
+        <Route path="/dashboard/usmap" component={MapUS}/>
+        <Route path="/dashboard/worldmap" component={MapWorld}/>
+        <Route path="/dashboard/alphabeticlist" component={ListAlphabetic}/>
+        <Route path="/dashboard/sortablelist" component={ListSortable}/>
 
       </div>
     )

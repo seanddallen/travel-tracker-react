@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import SideNav, { Toggle, Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
-// import { library } from '@fortawesome/fontawesome-svg-core'
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faCoffee } from '@fortawesome/free-solid-svg-icons'
-import '../../node_modules/font-awesome/css/font-awesome.min.css';
-
+import {Route, Link, withRouter} from 'react-router-dom'
+// import '../../node_modules/font-awesome/css/font-awesome.min.css';
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 import { connect } from 'react-redux'
 
@@ -14,21 +11,25 @@ class Sidenav extends Component {
 
     return (
       <SideNav
-          onSelect={(selected) => {
-              // Add your code here
-          }}
+        onSelect={(selected) => {
+            const to = '/' + selected;
+            if (this.props.location.pathname !== to) {
+                this.props.history.push(to);
+            }
+        }}
       >
           <SideNav.Toggle />
-          <SideNav.Nav defaultSelected="home">
-              <NavItem eventKey="home">
-                  <NavIcon>
-                      <i className="fa fa-fw fa-user" style={{ fontSize: '1.75em' }} />
-                  </NavIcon>
-                  <NavText>
-                      View Account
-                  </NavText>
+          <SideNav.Nav defaultSelected="dashboard/account">
+              <NavItem eventKey="dashboard/account">
+                <NavIcon>
+                    <i className="fa fa-fw fa-user" style={{ fontSize: '1.75em' }} />
+                </NavIcon>
+                <NavText>
+                    Account
+                </NavText>
               </NavItem>
-              <NavItem eventKey="progress">
+
+              <NavItem eventKey="dashboard/progress">
                   <NavIcon>
                       <i className="fa fa-fw fa-line-chart" style={{ fontSize: '1.75em' }} />
                   </NavIcon>
@@ -43,27 +44,35 @@ class Sidenav extends Component {
                   <NavText>
                       Views
                   </NavText>
-                  <NavItem eventKey="views/usmap">
+                  <NavItem eventKey="dashboard/views/usmap">
                       <NavText>
                           Map View (US)
                       </NavText>
                   </NavItem>
-                  <NavItem eventKey="views/worldmap">
+                  <NavItem eventKey="dashboard/views/worldmap">
                       <NavText>
                           Map View (World)
                       </NavText>
                   </NavItem>
-                  <NavItem eventKey="views/worldmap">
+                  <NavItem eventKey="dashboard/views/listAlphabetic">
                       <NavText>
                           Text View (Alphabetic)
                       </NavText>
                   </NavItem>
-                  <NavItem eventKey="views/worldmap">
+                  <NavItem eventKey="dashboard/views/ListSortable">
                       <NavText>
                           Text View (Sortable)
                       </NavText>
                   </NavItem>
               </NavItem>
+              {/* <NavItem eventKey="log-in-out">
+                  <NavIcon>
+                      <i className="fa fa-sign-in" style={{ fontSize: '1.75em' }} />
+                  </NavIcon>
+                  <NavText>
+                      Login/Logout
+                  </NavText>
+              </NavItem> */}
           </SideNav.Nav>
       </SideNav>
     )
@@ -77,4 +86,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { })(Sidenav)
+export default connect(mapStateToProps, { })(withRouter(Sidenav))
