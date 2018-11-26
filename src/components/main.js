@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import CameraList from './CameraList'
-import Cart from './Cart'
-import { fetchCameras } from '../redux/actions/camerasActions'
+// import CameraList from './CameraList'
+// import Cart from './Cart'
+// import { fetchCameras } from '../redux/actions/camerasActions'
 import { connect } from 'react-redux'
 
 class Main extends Component {
@@ -11,12 +11,12 @@ class Main extends Component {
     return (
       <div className="flex">
         <div id="main">
-          <CameraList />
+          {/* <CameraList /> */}
           {/* search={this.state.search} cameras={this.state.books} onClick={this.handleAddClick} */}
         </div>
 
         <div id="aside">
-          <Cart />
+          {/* <Cart /> */}
           {/* cartItems={this.state.camerasInCart} onClick={this.handleRemoveClick} */}
         </div>
       </div>
@@ -26,9 +26,9 @@ class Main extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    cameras: state.cameras,
-    cart: state.cart
+    // cameras: state.cameras,
+    // cart: state.cart
   };
 };
 
-export default connect(mapStateToProps, { fetchCameras })(Main)
+export default connect(mapStateToProps, { })(Main)

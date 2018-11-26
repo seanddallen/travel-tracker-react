@@ -1,14 +1,139 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.App {
+
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+#navbar {
+
+}
+
+#footer {
+  text-align: center;
+}
+
+#main{
+  width: 50%;
+  height: 100%;
+}
+
+#aside{
+  width: 50%;
+  margin-top: 20px;
+}
+
+#cart-card{
+  width: 600px;
+  box-shadow: 0 1px 4px 1px rgba(0,0,0,0.4);
+  background-color: orange;
+  border: none;
+}
+
+.flex{
+  display: flex;
+}
+.flex-col{
+  display: flex;
+  flex-direction: column;
+}
+.flex-around{
+  justify-content: space-around;
+}
+
+.flex-between{
+  justify-content: space-between;
+}
+
+.flex-y-center{
+  align-items: center;
+}
+
+.flex-x-center{
+  justify-content: center;
+}
+
+#search{
+  margin: 40px auto;
+  text-align: center;
+}
+
+#searchInput{
+  width: 50%;
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid lightgrey;
+}
+
+#logo{
+  margin-left: 25px;
+}
+
+#book{
+  margin: 20px 0 20px 40px;
+}
+
+.add-btn{
+  height: 50%;
+  width: 50%;
+}
+
+#checkout-btn{
+  width: 60%;
+  margin: 0 auto;
+}
+
+.hr{
+  width: 50%;
+}
+
+.img{
+  max-width: 300px;
+}
+
+#card-body{
+  color: RGBA(255,255,255,0.9)
+}
+
+#checkout-btn{
+  width: 50%;
+  background-color: RGBA(255,255,255,0.9);
+  box-shadow: 0 1px 4px 1px rgba(0,0,0,0.4);
+  border: none;
+  color: RGBA(0,0,0,0.8);
+}
+
+.cart-item{
+  color: RGBA(0,0,0,0.8);
+}
+
+#trash{
+  font-size: 1.6em;
+  cursor: pointer;
 }

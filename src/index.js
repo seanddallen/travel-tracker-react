@@ -6,7 +6,9 @@ import thunk from 'redux-thunk'
 import logger from 'redux-logger'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
-import './css/App.css';
+import 'font-awesome/css/font-awesome.min.css';
+
+import './css/index.css';
 import rootReducer from './redux/store'
 import App from './App';
 
