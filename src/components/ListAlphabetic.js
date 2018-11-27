@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Sidenav from './partials/Sidenav'
 import LocationCard from './LocationCard'
 import { Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
-// import { fetchCameras } from '../redux/actions/camerasActions'
+import { fetchCountries, fetchStates } from '../redux/actions/locationsActions'
 import { connect } from 'react-redux'
 
 class ListAlphabetic extends Component {
@@ -18,10 +18,10 @@ class ListAlphabetic extends Component {
 
   render () {
 
-    // let camerasList = this.props.cameras.map(camera => <Camera key={camera.id} camera={camera} />)
+    console.log(this.props.countries)
 
-    // let listOfCountries = this.props.countries.map(country => <LocationCard key={country.id} country={country} />)
-    // let listOfStates = this.props.states.map(state => <LocationCard key={state.id} state={state} />)
+    let listOfCountries = this.props.countries.map(country => <LocationCard key={country.id} country={country} />)
+    let listOfStates = this.props.states.map(state => <LocationCard key={state.id} state={state} />)
 
     return (
       <Row>
@@ -42,8 +42,8 @@ class ListAlphabetic extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    countries: state.countries,
-    states: state.states,
+    countries: state.locations.countries,
+    states: state.locations.states,
   };
 };
 
