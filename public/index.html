@@ -19,6 +19,155 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <script src="https://www.amcharts.com/lib/3/ammap.js" type="text/javascript"></script>
+    <script src="https://www.amcharts.com/lib/3/maps/js/worldHigh.js" type="text/javascript"></script>
+    <script src="https://www.amcharts.com/lib/3/maps/js/usaHigh.js" type="text/javascript"></script>
+    <script src="https://www.amcharts.com/lib/3/themes/dark.js" type="text/javascript"></script>
+    <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+    <script src="https://www.amcharts.com/lib/3/plugins/responsive/responsive.min.js"></script>
+    <script type="text/javascript" defer>
+      setInterval(()=>{
+        if(!document.getElementById('mapdiv'))
+          return;
+        if(document.getElementById('mapdiv').firstChild)
+          return;
+        let chart = AmCharts.makeChart('mapdiv', {
+          type: "map",
+          theme: "dark",
+          projection: "mercator",
+          panEventsEnabled: true,
+          backgroundColor: "#535364",
+          backgroundAlpha: 1,
+          zoomControl: {
+            zoomControlEnabled: true,
+            homeButtonEnabled: true
+            },
+          dataProvider: {
+            map: "worldHigh",
+            getAreasFromMap: true,
+            areas:
+              [
+
+              ]
+          },
+          areasSettings: {
+            selectable: true,
+            autoZoom : false,
+            color: "#B4B4B7",
+            colorSolid: "#84ADE9",
+            selectedColor: "#84ADE9",
+            outlineColor: "#666666",
+            rollOverColor: "#9EC2F7",
+            rollOverOutlineColor: "#000000"
+          },
+          "listeners": [ {
+            "event": "clickMapObject",
+            "method": function( event ) {
+              // deselect the area by assigning all of the dataProvider as selected object
+              chart.selectedObject = chart.dataProvider;
+
+              // toggle showAsSelected
+              event.mapObject.showAsSelected = !event.mapObject.showAsSelected;
+
+              // bring it to an appropriate color
+              chart.returnInitialColor( event.mapObject );
+
+              // let's build a list of currently selected states
+              var states = [];
+              for ( var i in chart.dataProvider.areas ) {
+                var area = chart.dataProvider.areas[ i ];
+                if ( area.showAsSelected ) {
+                  states.push( area.title );
+                }
+              }
+
+              console.log(event)
+            }
+          } ],
+          "export": {
+              "enabled": true,
+              "menu": [ {
+                "class": "export-main",
+                "menu": [ {
+                  "label": "Download",
+                  "menu": [ "PNG", "JPG", "PDF", "CSV" ]
+                }]
+              }]
+          }
+        });
+      }, 1000);
+    </script>
+
+    <script type="text/javascript" defer>
+      setInterval(()=>{
+        if(!document.getElementById('usmapdiv'))
+          return;
+        if(document.getElementById('usmapdiv').firstChild)
+          return;
+      var map = AmCharts.makeChart("usmapdiv",{
+          type: "map",
+          theme: "dark",
+          projection: "mercator",
+          panEventsEnabled: true,
+          backgroundColor: "#535364",
+          backgroundAlpha: 1,
+          zoomControl: {
+            zoomControlEnabled: true,
+            homeButtonEnabled: true
+            },
+          dataProvider: {
+            map: "usaHigh",
+            getAreasFromMap: true,
+            areas:
+              [
+              ]
+          },
+          areasSettings: {
+            selectable: true,
+            autoZoom : false,
+            color: "#B4B4B7",
+            colorSolid: "#84ADE9",
+            selectedColor: "#84ADE9",
+            outlineColor: "#666666",
+            rollOverColor: "#9EC2F7",
+            rollOverOutlineColor: "#000000"
+          },
+          "listeners": [ {
+            "event": "clickMapObject",
+            "method": function( event ) {
+              // deselect the area by assigning all of the dataProvider as selected object
+              map.selectedObject = map.dataProvider;
+
+              // toggle showAsSelected
+              event.mapObject.showAsSelected = !event.mapObject.showAsSelected;
+
+              // bring it to an appropriate color
+              map.returnInitialColor( event.mapObject );
+
+              // let's build a list of currently selected states
+              var states = [];
+              for ( var i in map.dataProvider.areas ) {
+                var area = map.dataProvider.areas[ i ];
+                if ( area.showAsSelected ) {
+                  states.push( area.title );
+                }
+              }
+            }
+          } ],
+          "export": {
+              "enabled": true,
+              "menu": [ {
+                "class": "export-main",
+                "menu": [ {
+                  "label": "Download",
+                  "menu": [ "PNG", "JPG", "PDF", "CSV" ]
+                }]
+              }]
+          }
+        });
+      }, 1000);
+    </script>
+
     <title>React App</title>
   </head>
   <body>

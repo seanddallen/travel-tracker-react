@@ -16,7 +16,7 @@ class Dashboard extends Component {
   render () {
 
     return (
-      <div className="flex">
+      <div>
         <Sidenav />
 
         {/* //Change endpoint to /:userid (after Auth) */}

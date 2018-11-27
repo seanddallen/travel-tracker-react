@@ -1,17 +1,23 @@
 import React, { Component } from 'react';
 import Sidenav from './partials/Sidenav'
+import { Card, Button, CardTitle, CardText } from 'reactstrap';
 // import { fetchCameras } from '../redux/actions/camerasActions'
 import { connect } from 'react-redux'
-import AmCharts from "@amcharts/amcharts3-react";
 
-class MapWorld extends Component {
+class ListAlphabetic extends Component {
 
   render () {
 
     return (
       <div className="flex">
-        {/* <AmCharts.React style={{ width: "100%", height: "500px" }} options={config} /> */}
-        <div id="mapdiv" style={{ width: '96vw', height: '92vh', marginLeft: '63px' }}></div>
+
+        <div>
+          <Card body outline color="secondary">
+            <CardTitle>{this.props.country.name}</CardTitle>
+            <Button>Enter</Button>
+          </Card>
+        </div>
+
       </div>
     )
   }
@@ -24,4 +30,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(MapWorld)
+export default connect(mapStateToProps, { })(ListAlphabetic)

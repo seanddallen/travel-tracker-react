@@ -52,22 +52,22 @@ class Sidenav extends Component {
                   <NavText>
                       Views
                   </NavText>
-                  <NavItem eventKey="dashboard/views/usmap">
+                  <NavItem eventKey="dashboard/usmap">
                       <NavText>
                           Map View (US)
                       </NavText>
                   </NavItem>
-                  <NavItem eventKey="dashboard/views/worldmap">
+                  <NavItem eventKey="dashboard/worldmap">
                       <NavText>
                           Map View (World)
                       </NavText>
                   </NavItem>
-                  <NavItem eventKey="dashboard/views/listAlphabetic">
+                  <NavItem eventKey="dashboard/alphabeticlist">
                       <NavText>
                           Text View (Alphabetic)
                       </NavText>
                   </NavItem>
-                  <NavItem eventKey="dashboard/views/ListSortable">
+                  <NavItem eventKey="dashboard/sortablelist">
                       <NavText>
                           Text View (Sortable)
                       </NavText>

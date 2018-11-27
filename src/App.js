@@ -4,8 +4,7 @@ import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import Header from './components/partials/Header';
 import Footer from './components/partials/Footer';
-import { BrowserRouter, Route } from 'react-router-dom'
-
+import { BrowserRouter, Route } from 'react-router-dom';
 class App extends Component {
   render() {
     return (

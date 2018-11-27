@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Sidenav from './partials/Sidenav'
 // import { fetchCameras } from '../redux/actions/camerasActions'
 import { connect } from 'react-redux'
+import AmCharts from "@amcharts/amcharts3-react";
 
 class MapUS extends Component {
 
@@ -9,14 +10,7 @@ class MapUS extends Component {
 
     return (
       <div className="flex">
-        <Sidenav />
-
-        {/* <Route path={`${match.path}/:id`} path="/dashboard/usmap/user/:id" component={usmap}/>
-        <Route path="/worldmap" component={usmap}/>
-        <Route path="/usmap" component={usmap}/>
-        <Route path="/usmap" component={usmap}/>
-        <Route path="/usmap" component={usmap}/> */}
-
+        <div id="usmapdiv" style={{ width: '96vw', height: '92vh', marginLeft: '63px' }}></div>
       </div>
     )
   }
