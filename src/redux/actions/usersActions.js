@@ -1,23 +1,16 @@
 import axios from 'axios'
-export const FETCH_CAMERAS = 'FETCH_CAMERAS'
+export const FETCH_USERS = 'FETCH_USERS'
 
 
-export const fetchCameras = () => {
+export const fetchUsers = () => {
   return dispatch =>  {
-    fetch('http://localhost:8082/api/cameras')
+    fetch('http://localhost:8000/users')
       .then(res => res.json())
-      .then(cameras => {
+      .then(users => {
         dispatch({
-        type: FETCH_CAMERAS,
-        payload: cameras
+        type: FETCH_USERS,
+        payload: users
       })
     })
-  }
-}
-
-export const addToCart = (camera) => {
-  return {
-    type: ADD_TO_CART,
-    payload: camera
   }
 }

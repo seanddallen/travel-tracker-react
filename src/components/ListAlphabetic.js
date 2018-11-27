@@ -12,8 +12,8 @@ class ListAlphabetic extends Component {
   }
 
   componentDidMount(){
-    // this.props.fetchCountries()
-    // this.props.fetchStates()
+    this.props.fetchCountries()
+    this.props.fetchStates()
   }
 
   render () {
@@ -28,7 +28,7 @@ class ListAlphabetic extends Component {
 
         <Col className="text-center">
           {/* { listOfCountries } */}
-          COuntries
+          Countries
         </Col>
         <Col className="text-center">
         {/* { listOfStates } */}
@@ -44,9 +44,7 @@ const mapStateToProps = (state) => {
   return {
     countries: state.countries,
     states: state.states,
-    buckets: state.buckets,
-    posts: state.posts
   };
 };
 
-export default connect(mapStateToProps, { })(ListAlphabetic)
+export default connect(mapStateToProps, { fetchStates, fetchCountries })(ListAlphabetic)
