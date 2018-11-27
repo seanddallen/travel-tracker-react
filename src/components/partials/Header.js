@@ -11,7 +11,7 @@ class Header extends Component {
   render () {
     return (
       <div id="navbar">
-        <Navbar color="warning" light expand="md">
+        <Navbar color="warning" light expand="md" style={{ height: '9vh' }}>
           <div className="ml-5">
             <NavbarBrand className="ml-5" href="/">TravTrack</NavbarBrand>
           </div>

@@ -11,12 +11,6 @@ class Progress extends Component {
       <div className="flex">
         <Sidenav />
 
-        {/* <Route path={`${match.path}/:id`} path="/dashboard/usmap/user/:id" component={usmap}/>
-        <Route path="/worldmap" component={usmap}/>
-        <Route path="/usmap" component={usmap}/>
-        <Route path="/usmap" component={usmap}/>
-        <Route path="/usmap" component={usmap}/> */}
-
       </div>
     )
   }

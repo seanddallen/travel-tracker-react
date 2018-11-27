@@ -10,7 +10,8 @@ class Sidenav extends Component {
   render () {
 
     return (
-      <SideNav
+      <SideNav style={{ backgroundColor: 'darkgrey'}}
+
         onSelect={(selected) => {
             const to = '/' + selected;
             if (this.props.location.pathname !== to) {
@@ -19,7 +20,15 @@ class Sidenav extends Component {
         }}
       >
           <SideNav.Toggle />
-          <SideNav.Nav defaultSelected="dashboard/account">
+          <SideNav.Nav defaultSelected="/login">
+              <NavItem eventKey="/login">
+                <NavIcon>
+                    <i className="fa fa-fw fa-sign-out" style={{ fontSize: '1.75em' }} />
+                </NavIcon>
+                <NavText>
+                    Logout
+                </NavText>
+              </NavItem>
               <NavItem eventKey="dashboard/account">
                 <NavIcon>
                     <i className="fa fa-fw fa-user" style={{ fontSize: '1.75em' }} />
@@ -28,7 +37,6 @@ class Sidenav extends Component {
                     Account
                 </NavText>
               </NavItem>
-
               <NavItem eventKey="dashboard/progress">
                   <NavIcon>
                       <i className="fa fa-fw fa-line-chart" style={{ fontSize: '1.75em' }} />
