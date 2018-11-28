@@ -9,7 +9,6 @@ class Progress extends Component {
 
     return (
       <div className="flex">
-        <Sidenav />
 
       </div>
     )

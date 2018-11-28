@@ -12,7 +12,6 @@ class Account extends Component {
 
     return (
       <div className="flex">
-        <Sidenav />
 
         <Form style={{ border: 'solid 1px rgba(0,0,0,0.4)', borderRadius: '6px', width: '40vw', padding: '40px', margin: '5vh 2vw 5vh 10vw' }}>
           <Label className="text-center mb-3" style={{ fontSize: '24px', fontWeight: 'bold'}} sm={12}>Account Details</Label>

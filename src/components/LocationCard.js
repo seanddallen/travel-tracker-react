@@ -1,33 +1,36 @@
 import React, { Component } from 'react';
-import Sidenav from './partials/Sidenav'
-import { Card, Button, CardTitle, CardText } from 'reactstrap';
+import { Card, Button, CardTitle, CardText, Col } from 'reactstrap';
+import { Link, Route } from 'react-router-dom'
+import Location from './Location'
+
 // import { fetchCameras } from '../redux/actions/camerasActions'
 import { connect } from 'react-redux'
 
-class ListAlphabetic extends Component {
+class LocationCard extends Component {
 
   render () {
 
+    // console.log('props in LocationCard', this.props.country.location_name)
+
     return (
-      <div className="flex">
-
-        <div>
-          <Card body outline color="secondary">
-            <CardTitle>{this.props.country.name}</CardTitle>
-            <Button>Enter</Button>
-          </Card>
-        </div>
-
-      </div>
+      <Card body outline color="secondary" className="mt-1" style={{ height: '10vh', overflow: 'hidden' }}>
+        <CardTitle style={{ fontSize: '1vw' }}>
+          <Link to={"/dashboard/locations/" + this.props.country.id}>{this.props.country.location_name}</Link>
+          <img src=""></img>
+        </CardTitle>
+        {/* <Col>
+          <Button style={{ width: '20%' }}>Enter</Button>
+        </Col> */}
+      </Card>
     )
   }
 }
 
 const mapStateToProps = (state) => {
   return {
-    // cameras: state.cameras,
-    // cart: state.cart
+    countries: state.locations.countries,
+    states: state.locations.states,
   };
 };
 
-export default connect(mapStateToProps, { })(ListAlphabetic)
+export default connect(mapStateToProps, { })(LocationCard)

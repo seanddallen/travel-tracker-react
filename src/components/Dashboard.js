@@ -6,6 +6,7 @@ import MapUS from './MapUS'
 import MapWorld from './MapWorld'
 import ListAlphabetic from './ListAlphabetic'
 import ListSortable from './ListSortable'
+import Location from './Location'
 
 // import { fetchCameras } from '../redux/actions/camerasActions'
 import { Route } from 'react-router-dom'
@@ -20,12 +21,13 @@ class Dashboard extends Component {
         <Sidenav />
 
         {/* //Change endpoint to /:userid (after Auth) */}
-        <Route path="/dashboard/account" component={Account}/>
-        <Route path="/dashboard/progress" component={Progress}/>
-        <Route path="/dashboard/usmap" component={MapUS}/>
-        <Route path="/dashboard/worldmap" component={MapWorld}/>
-        <Route path="/dashboard/alphabeticlist" component={ListAlphabetic}/>
-        <Route path="/dashboard/sortablelist" component={ListSortable}/>
+        <Route exact path="/dashboard/account" component={Account}/>
+        <Route exact path="/dashboard/progress" component={Progress}/>
+        <Route exact path="/dashboard/usmap" component={MapUS}/>
+        <Route exact path="/dashboard/worldmap" component={MapWorld}/>
+        <Route exact path="/dashboard/alphabeticlist" component={ListAlphabetic}/>
+        <Route exact path="/dashboard/sortablelist" component={ListSortable}/>
+        <Route path="/dashboard/locations/:id" component={Location}/>
 
       </div>
     )
