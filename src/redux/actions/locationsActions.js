@@ -1,4 +1,5 @@
 import axios from 'axios'
+export const FETCH_LOCATION = 'FETCH_LOCATION'
 export const FETCH_LOCATIONS = 'FETCH_LOCATIONS'
 
 export const FETCH_COUNTRIES = 'FETCH_COUNTRIES'
@@ -10,6 +11,19 @@ export const FETCH_OCEANIA = 'FETCH_OCEANIA'
 export const FETCH_SOUTHAMERICA = 'FETCH_SOUTHAMERICA'
 export const FETCH_NORTHAMERICA = 'FETCH_NORTHAMERICA'
 
+
+export const fetchLocation = (id) => {
+  return dispatch =>  {
+    fetch(`http://localhost:8000/locations/${id}`)
+      .then(res => res.json())
+      .then(location => {
+        dispatch({
+        type: FETCH_LOCATION,
+        payload: location
+      })
+    })
+  }
+}
 
 export const fetchLocations = () => {
   return dispatch =>  {

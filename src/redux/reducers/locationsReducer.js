@@ -1,3 +1,4 @@
+import { FETCH_LOCATION } from '../actions/locationsActions'
 import { FETCH_LOCATIONS } from '../actions/locationsActions'
 
 import { FETCH_COUNTRIES } from '../actions/locationsActions'
@@ -9,8 +10,11 @@ import { FETCH_OCEANIA } from '../actions/locationsActions'
 import { FETCH_NORTHAMERICA } from '../actions/locationsActions'
 import { FETCH_SOUTHAMERICA } from '../actions/locationsActions'
 
-export default (state = {locations: []}, action) => {
+export default (state = {location: [], locations: []}, action) => {
   switch (action.type) {
+
+    case FETCH_LOCATION:
+      return {...state, location:action.payload}
 
     case FETCH_LOCATIONS:
       return {...state, locations:action.payload}
