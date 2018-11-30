@@ -46,19 +46,19 @@ class Location extends Component {
         <Row style={{ marginTop: '0px', marginBottom: '40px', justifyContent: 'center' }} >
           <ButtonGroup size="lg">
             <Link to={`/dashboard/locations/${this.props.match.params.id}/bucketlist`}>
-              <Button style={{ width: '200px', marginRight: '20px', borderRadius: '6px', color: '#FAC10B', backgroundColor: 'rgba(0,0,0,0.8)' }}>Bucket List</Button>
+              <Button style={{ width: '200px', marginRight: '20px', borderRadius: '6px', color: '#FAC10B', backgroundColor: 'rgba(0,0,0,0.8)', boxShadow: '0 2px 4px 2px rgba(0,0,0,0.4)' }}>Bucket List</Button>
             </Link>
             <Link to={`/dashboard/locations/${this.props.match.params.id}/locationinfo`}>
-              <Button style={{ width: '200px', marginRight: '20px', borderRadius: '6px', color: '#FAC10B', backgroundColor: 'rgba(0,0,0,0.8)' }}>Location Info</Button>
+              <Button style={{ width: '200px', marginRight: '20px', borderRadius: '6px', color: '#FAC10B', backgroundColor: 'rgba(0,0,0,0.8)', boxShadow: '0 2px 4px 2px rgba(0,0,0,0.4)' }}>Location Info</Button>
             </Link>
             <Link to={`/dashboard/locations/${this.props.match.params.id}/tripideas`}>
-              <Button style={{ width: '200px', marginRight: '20px', borderRadius: '6px', color: '#FAC10B', backgroundColor: 'rgba(0,0,0,0.8)'  }}>Trip Ideas</Button>
+              <Button style={{ width: '200px', marginRight: '20px', borderRadius: '6px', color: '#FAC10B', backgroundColor: 'rgba(0,0,0,0.8)', boxShadow: '0 2px 4px 2px rgba(0,0,0,0.4)'  }}>Trip Ideas</Button>
             </Link>
             <Link to={`/dashboard/locations/${this.props.match.params.id}/pictures`}>
-              <Button style={{ width: '200px', marginRight: '20px', borderRadius: '6px', color: '#FAC10B', backgroundColor: 'rgba(0,0,0,0.8)'  }}>Pictures</Button>
+              <Button style={{ width: '200px', marginRight: '20px', borderRadius: '6px', color: '#FAC10B', backgroundColor: 'rgba(0,0,0,0.8)', boxShadow: '0 2px 4px 2px rgba(0,0,0,0.4)'  }}>Pictures</Button>
             </Link>
             <Link to={`/dashboard/locations/${this.props.match.params.id}/journal`}>
-              <Button style={{ width: '200px', borderRadius: '6px', color: '#FAC10B', backgroundColor: 'rgba(0,0,0,0.8)' }}>Journal</Button>
+              <Button style={{ width: '200px', borderRadius: '6px', color: '#FAC10B', backgroundColor: 'rgba(0,0,0,0.8)', boxShadow: '0 2px 4px 2px rgba(0,0,0,0.4)' }}>Journal</Button>
             </Link>
           </ButtonGroup>
         </Row>

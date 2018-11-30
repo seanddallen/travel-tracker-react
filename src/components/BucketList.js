@@ -42,8 +42,8 @@ class BucketList extends Component {
         <Row style={{ margin: '0px auto 20px auto', justifyContent: 'center' }}>
           <Form onSubmit={this.handleAddBucket}>
             <Row>
-              <Input type="text" name="bucket" autoComplete="off" placeholder="Add Travel Bucket List" style={{ width: '400px', marginRight: '10px' }} onChange={e => this.setState({ newBucketListItem: e.target.value })} />
-              <Button color="warning" type="submit"><b>+</b></Button>
+              <Input type="text" name="bucket" autoComplete="off" placeholder="Add Travel Bucket List" style={{ width: '400px', marginRight: '10px', boxShadow: '0 2px 4px 2px rgba(0,0,0,0.6)' }} onChange={e => this.setState({ newBucketListItem: e.target.value })} />
+              <Button color="warning" type="submit" style={{boxShadow: '0 2px 4px 2px rgba(0,0,0,0.6)'}}><b>+</b></Button>
             </Row>
           </Form>
         </Row>

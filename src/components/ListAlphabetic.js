@@ -44,7 +44,7 @@ class ListAlphabetic extends Component {
         <Row style={{ justifyContent: 'center', marginTop: '40px' }}>
           <Form>
             <FormGroup>
-              <Input type="search" name="search" autoComplete="off" placeholder="Search for Country or State" style={{ width: '400px' }} onChange={this.handleSearchChange} />
+              <Input type="search" name="search" autoComplete="off" placeholder="Search for Country or State" style={{ width: '400px', boxShadow: '0 4px 4px 4px rgba(0,0,0,0.6)' }} onChange={this.handleSearchChange} />
             </FormGroup>
           </Form>
         </Row>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Card, Button, CardTitle, CardText, Col } from 'reactstrap';
 import { Link, Route } from 'react-router-dom'
-import { FaTrashAlt, FaCheckSquare } from 'react-icons/fa'
+import { FaTrashAlt, FaCheckSquare, FaSquare } from 'react-icons/fa'
 import { removeBucket, checkoffBucket } from '../redux/actions/bucketsActions'
 
 // import { fetchCameras } from '../redux/actions/camerasActions'
@@ -37,7 +37,7 @@ class BucketCard extends Component {
             {this.props.bucket.is_complete ? null : <FaTrashAlt id="trash" onClick={this.handleRemove} /> }
             {this.props.bucket.is_complete ?
             <FaCheckSquare id="check" color="FAC10B" style={{fontSize: '1.7rem', marginLeft: '10px', cursor: 'pointer'}} onClick={this.handleComplete} /> :
-            <FaCheckSquare id="check" style={{fontSize: '1.7rem', marginLeft: '10px', cursor: 'pointer'}} onClick={this.handleComplete} /> }
+            <FaSquare id="check" style={{fontSize: '1.7rem', marginLeft: '10px', cursor: 'pointer'}} onClick={this.handleComplete} /> }
 
           </div>
         </div>
