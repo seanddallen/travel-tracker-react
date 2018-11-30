@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Sidenav from './partials/Sidenav'
+import HorizontalProgressBar from './charts/Horizontal'
+import PieContinent from './charts/PieContinent'
 import { Container, Row, Col } from 'reactstrap'
+import { Bar, Pie, HorizontalBar } from 'react-chartjs-2'
 
 // import { fetchCameras } from '../redux/actions/camerasActions'
 import { connect } from 'react-redux'
@@ -12,20 +15,10 @@ class Progress extends Component {
     return (
       <Container style={{}}>
         <Row style={{justifyContent: 'center'}}>
-          TITLE
+          <HorizontalProgressBar />
         </Row>
-        <Row>
-          <Col>country progress</Col>
-          <Col>state progress</Col>
-          <Col>bucket progress</Col>
-        </Row>
-        <Row>
-          <Col>Africa Pie</Col>
-          <Col>Asia Pie</Col>
-          <Col>Europe Pie</Col>
-          <Col>Oceania Pie</Col>
-          <Col>N. America Pie</Col>
-          <Col>S. America Pie</Col>
+        <Row style={{marginTop: '10px', justifyContent: 'center'}}>
+          <PieContinent />
         </Row>
       </Container>
     )
