@@ -11,9 +11,11 @@ class Account extends Component {
   render () {
 
     return (
-      <div className="flex">
+      <div>
 
-        <Form style={{ border: 'solid 1px rgba(0,0,0,0.4)', borderRadius: '6px', width: '40vw', padding: '40px', margin: '5vh 2vw 5vh 10vw', boxShadow: '0 4px 8px 4px rgba(0,0,0,0.4)' }}>
+        <img style={{width: '100vw', height: '100vh', marginLeft: '63px'}} src={require('./under_construction.jpg')} />
+
+        {/* <Form style={{ border: 'solid 1px rgba(0,0,0,0.4)', borderRadius: '6px', width: '40vw', padding: '40px', margin: '5vh 2vw 5vh 10vw', boxShadow: '0 4px 8px 4px rgba(0,0,0,0.4)' }}>
           <Label className="text-center mb-3" style={{ fontSize: '24px', fontWeight: 'bold'}} sm={12}>Account Details</Label>
           <FormGroup row>
             <Label sm={12}>Name: </Label>
@@ -55,7 +57,7 @@ class Account extends Component {
           <div className="flex flex-x-center">
             <Button>Update</Button>
           </div>
-        </Form>
+        </Form> */}
 
       </div>
     )
