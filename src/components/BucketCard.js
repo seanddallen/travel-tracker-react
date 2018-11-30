@@ -30,17 +30,18 @@ class BucketCard extends Component {
         <div className="flex flex-between cart-item">
           <div>
             <CardTitle style={{ fontSize: '1.2vw', margin: '10px' }}>
-              {this.props.bucket.bucket_name}
+              {this.props.bucket.is_complete ? <del>{this.props.bucket.bucket_name}</del> : `${this.props.bucket.bucket_name}` }
             </CardTitle>
           </div>
           <div className="flex flex-y-center mr-3">
-            <FaTrashAlt id="trash" onClick={this.handleRemove} />
-            <FaCheckSquare id="check" style={{fontSize: '1.7rem', marginLeft: '10px', cursor: 'pointer'}} onClick={this.handleComplete} />
+            {this.props.bucket.is_complete ? null : <FaTrashAlt id="trash" onClick={this.handleRemove} /> }
+            {this.props.bucket.is_complete ?
+            <FaCheckSquare id="check" color="FAC10B" style={{fontSize: '1.7rem', marginLeft: '10px', cursor: 'pointer'}} onClick={this.handleComplete} /> :
+            <FaCheckSquare id="check" style={{fontSize: '1.7rem', marginLeft: '10px', cursor: 'pointer'}} onClick={this.handleComplete} /> }
+
           </div>
         </div>
       </Card>
-
-
     )
   }
 }

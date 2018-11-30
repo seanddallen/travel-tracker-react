@@ -42,10 +42,10 @@ export const removeBucket = (bucket) => {
 
 export const checkoffBucket = (bucket) => {
   return async (dispatch) => {
-    let thebucket = await axios.patch(`http://localhost:8000/checkoffbucket/${bucket.id}`, bucket)
+    let thebucket = await axios.put(`http://localhost:8000/checkoffbucket/${bucket.id}`, bucket)
     dispatch({
       type: CHECKOFF_BUCKET,
-      payload: bucket
+      payload: thebucket.data
     })
   }
 }

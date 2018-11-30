@@ -13,7 +13,7 @@ export default (state = [], action) => {
       return [...state.filter(bucket => bucket.id !== action.payload.id)]
 
     case CHECKOFF_BUCKET:
-      return action.payload
+      return state.map(bucket => bucket.id === action.payload.id ? action.payload : bucket)
 
     default:
       return state

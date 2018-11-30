@@ -11,15 +11,15 @@ class Header extends Component {
   render () {
     return (
       <div id="navbar">
-        <Navbar color="warning" light expand="md" style={{ height: '9vh' }}>
+        <Navbar light expand="md" style={{ height: '60px', backgroundColor: 'coral' }}>
           <div className="ml-5">
-            <NavbarBrand className="ml-5" href="/">TravTrack</NavbarBrand>
+            <NavbarBrand style={{fontFamily: '', fontSize: '1.5rem'}} href="/login">TravTrack</NavbarBrand>
           </div>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto mr-5" navbar>
               <NavItem className="mr-5">
-                <NavLink href="/components/">???</NavLink>
+                {/* <NavLink href="/"></NavLink> */}
               </NavItem>
             </Nav>
           </Collapse>

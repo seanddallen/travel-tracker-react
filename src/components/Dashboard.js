@@ -9,7 +9,7 @@ import ListSortable from './ListSortable'
 import Location from './Location'
 
 // import { fetchCameras } from '../redux/actions/camerasActions'
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 class Dashboard extends Component {
@@ -21,13 +21,15 @@ class Dashboard extends Component {
         <Sidenav />
 
         {/* //Change endpoint to /:userid (after Auth) */}
-        <Route exact path="/dashboard/account" component={Account}/>
-        <Route exact path="/dashboard/progress" component={Progress}/>
-        <Route exact path="/dashboard/usmap" component={MapUS}/>
-        <Route exact path="/dashboard/worldmap" component={MapWorld}/>
-        <Route exact path="/dashboard/alphabeticlist" component={ListAlphabetic}/>
-        <Route exact path="/dashboard/sortablelist" component={ListSortable}/>
-        <Route path="/dashboard/locations/:id" component={Location}/>
+        <Switch>
+          <Route exact path="/dashboard/account" component={Account}/>
+          <Route exact path="/dashboard/progress" component={Progress}/>
+          <Route exact path="/dashboard/usmap" component={MapUS}/>
+          <Route exact path="/dashboard/worldmap" component={MapWorld}/>
+          <Route exact path="/dashboard/alphabeticlist" component={ListAlphabetic}/>
+          {/* <Route exact path="/dashboard/sortablelist" component={ListSortable}/> */}
+          <Route path="/dashboard/locations/:id" component={Location}/>
+        </Switch>
 
       </div>
     )
