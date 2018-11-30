@@ -25,7 +25,6 @@ class App extends Component {
           <Header />
           <Route path="/login" component={Login} />
           <Route path="/dashboard" component={Dashboard} />
-          {/* <Footer /> */}
         </div>
       </BrowserRouter>
 
