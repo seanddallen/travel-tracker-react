@@ -21,7 +21,7 @@ class LocationCard extends Component {
     // console.log('props in LocationCard', this.props.country.location_name)
 
     let isComplete = this.props.country.is_complete
-    let cardColor = isComplete ? 'lightgrey' : ''
+    let cardColor = isComplete ? '#ccc' : ''
     return (
 
       <Button body outline color="secondary" className="location-button mt-1" style={{ display: 'block', margin: '0 auto', width: '150px', height: '10vh', overflow: 'hidden', boxShadow: '0 4px 4px 4px rgba(0,0,0,0.2)', backgroundColor: `${cardColor}` }} onClick={this.handleComplete}>

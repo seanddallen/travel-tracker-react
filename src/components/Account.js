@@ -13,7 +13,7 @@ class Account extends Component {
     return (
       <div className="flex">
 
-        <Form style={{ border: 'solid 1px rgba(0,0,0,0.4)', borderRadius: '6px', width: '40vw', padding: '40px', margin: '5vh 2vw 5vh 10vw' }}>
+        <Form style={{ border: 'solid 1px rgba(0,0,0,0.4)', borderRadius: '6px', width: '40vw', padding: '40px', margin: '5vh 2vw 5vh 10vw', boxShadow: '0 4px 8px 4px rgba(0,0,0,0.4)' }}>
           <Label className="text-center mb-3" style={{ fontSize: '24px', fontWeight: 'bold'}} sm={12}>Account Details</Label>
           <FormGroup row>
             <Label sm={12}>Name: </Label>
@@ -32,7 +32,7 @@ class Account extends Component {
           </FormGroup>
         </Form>
 
-        <Form style={{ border: 'solid 1px rgba(0,0,0,0.4)', borderRadius: '6px', width: '40vw', padding: '40px', margin: '5vh' }}>
+        <Form style={{ border: 'solid 1px rgba(0,0,0,0.4)', borderRadius: '6px', width: '40vw', padding: '40px', margin: '5vh', boxShadow: '0 4px 8px 4px rgba(0,0,0,0.4)' }}>
           <Label className="text-center mb-3" style={{ fontSize: '24px', fontWeight: 'bold'}} sm={12}>Update Password</Label>
           <FormGroup row>
             <Label sm={4}>Current Password</Label>

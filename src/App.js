@@ -7,6 +7,7 @@ import Footer from './components/partials/Footer';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { fetchLocations } from './redux/actions/locationsActions'
 import { fetchBuckets } from './redux/actions/bucketsActions'
+import { fetchPosts } from './redux/actions/postsActions'
 import { connect } from 'react-redux'
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
   componentDidMount(){
     this.props.fetchLocations()
     this.props.fetchBuckets()
+    this.props.fetchPosts()
   }
 
   render() {
@@ -37,4 +39,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { fetchLocations, fetchBuckets })(App)
+export default connect(mapStateToProps, { fetchLocations, fetchBuckets, fetchPosts })(App)
