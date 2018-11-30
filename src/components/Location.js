@@ -40,7 +40,7 @@ class Location extends Component {
 
     return (
       <Container>
-        <Row style={{ marginTop: '40px', marginBottom: '20px', justifyContent: 'center' }}>
+        <Row style={{ marginTop: '40px', marginBottom: '20px', justifyContent: 'center', fontFamily: 'chalkduster' }}>
           <h2>{location ? location.location_name : null}</h2>
         </Row>
         <Row style={{ marginTop: '0px', marginBottom: '40px', justifyContent: 'center' }} >

@@ -51,31 +51,31 @@ class ListAlphabetic extends Component {
 
         <Row style={{ marginLeft: '70px', marginRight: '10px' }}>
           <Col  className="text-center mt-1">
-            <h3 className="mt-3 mb-3">Africa</h3>
+            <h3 className="mt-3 mb-3" style={{fontFamily: 'marker felt'}}>Africa</h3>
             { listOfAfrica }
           </Col>
           <Col  className="text-center mt-1">
-            <h3 className="mt-3 mb-3">Asia</h3>
+            <h3 className="mt-3 mb-3" style={{fontFamily: 'marker felt'}}>Asia</h3>
             { listOfAsia }
           </Col>
           <Col  className="text-center mt-1">
-            <h3 className="mt-3 mb-3">Europe</h3>
+            <h3 className="mt-3 mb-3" style={{fontFamily: 'marker felt'}}>Europe</h3>
             { listOfEurope }
           </Col>
           <Col  className="text-center mt-1">
-            <h3 className="mt-3 mb-3">Oceania</h3>
+            <h3 className="mt-3 mb-3" style={{fontFamily: 'marker felt'}}>Oceania</h3>
             { listOfOceania }
           </Col>
           <Col  className="text-center mt-1">
-            <h3 className="mt-3 mb-3">N. America</h3>
+            <h3 className="mt-3 mb-3" style={{fontFamily: 'marker felt'}}>N. America</h3>
             { listOfNorthAmerica }
           </Col>
           <Col  className="text-center mt-1">
-            <h3 className="mt-3 mb-3">S. America</h3>
+            <h3 className="mt-3 mb-3" style={{fontFamily: 'marker felt'}}>S. America</h3>
             { listOfSouthAmerica }
           </Col>
           <Col  className="text-center mt-1">
-            <h3 className="mt-3 mb-3">USA</h3>
+            <h3 className="mt-3 mb-3" style={{fontFamily: 'marker felt'}}>USA</h3>
             { listOfStates }
           </Col>
         </Row>

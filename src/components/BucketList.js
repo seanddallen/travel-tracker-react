@@ -49,7 +49,7 @@ class BucketList extends Component {
         </Row>
         <Row>
           <Col style={{ margin: '0 auto' }}>
-            <h3 className="text-center">Waiting</h3>
+            <h3 className="text-center" style={{fontFamily: 'marker felt'}}>Waiting</h3>
 
             <Card body outline color="secondary" className="mt-1" style={{ height: '90vh', overflow: 'hidden', boxShadow: '0 4px 8px 4px rgba(0,0,0,0.4)' }}>
               { listOfBuckets }
@@ -59,7 +59,7 @@ class BucketList extends Component {
             </Row> */}
           </Col>
           <Col style={{ margin: '0 auto' }}>
-            <h3 className="text-center">Completed</h3>
+            <h3 className="text-center" style={{fontFamily: 'marker felt'}}>Completed</h3>
             <Card body outline color="secondary" className="mt-1" style={{ height: '90vh', overflow: 'hidden', boxShadow: '0 4px 8px 4px rgba(0,0,0,0.4)' }}>
               { listOfCompletedBuckets }
             </Card>

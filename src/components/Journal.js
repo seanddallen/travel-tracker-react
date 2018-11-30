@@ -49,7 +49,7 @@ class Journal extends Component {
       <div>
         <Row>
           <Col style={{ margin: '0 auto' }}>
-            <h3 className="text-center" style={{marginBottom: '20px'}}>New Journal Entry</h3>
+            <h3 className="text-center" style={{marginBottom: '20px', fontFamily: "marker felt" }}>New Journal Entry</h3>
             <Row style={{ margin: '0px auto 20px auto', justifyContent: 'center' }}>
               <Form onSubmit={this.handleAddPost}>
                 <Row>
@@ -71,8 +71,8 @@ class Journal extends Component {
           </Col>
 
           <Col style={{ margin: '0 auto' }}>
-            <h3 className="text-center" style={{marginBottom: '20px'}}>Past Journal Entries</h3>
-            <Card body outline color="secondary" className="mt-1" style={{ minHeight: '55vh', overflow: 'hidden', boxShadow: '0 4px 8px 4px rgba(0,0,0,0.4)' }}>
+            <h3 className="text-center" style={{marginBottom: '20px', fontFamily: "marker felt" }}>Past Journal Entries</h3>
+            <Card body outline color="secondary" className="mt-1" style={{ minHeight: '55vh', overflow: 'hidden', boxShadow: '0 4px 8px 4px rgba(0,0,0,0.4)'}}>
               { listOfPosts }
             </Card>
           </Col>
