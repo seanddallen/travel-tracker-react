@@ -22,16 +22,21 @@ class Journal extends Component {
     this.props.addPost({
       title: this.state.title,
       content: this.state.post,
-      date: this.state.date
+      date: this.state.date,
+      location_id: Number(this.props.match.params.id),
+      user_id: 1
     })
     this.setState({
-      newBucketListItem: ''
+      title: '',
+      date: '',
+      post: ''
     })
   }
 
   render () {
 
     let location = this.props.locations.find(location => location.id === +this.props.match.params.id)
+    console.log('props posts', this.props.posts)
 
     // console.log('buckets', this.props.buckets)
     let listOfPosts = this.props.posts.filter(post => post.location_id === +this.props.match.params.id)
@@ -46,7 +51,7 @@ class Journal extends Component {
           <Col style={{ margin: '0 auto' }}>
             <h3 className="text-center" style={{marginBottom: '20px'}}>New Journal Entry</h3>
             <Row style={{ margin: '0px auto 20px auto', justifyContent: 'center' }}>
-              <Form onSubmit={this.handlePost}>
+              <Form onSubmit={this.handleAddPost}>
                 <Row>
                   <FormGroup style={{width: '90%', margin: '0 auto'}}>
                     <Input type="text" name="title" placeholder="Entry Title" onChange={e => this.setState({ title: e.target.value })} />
@@ -67,7 +72,7 @@ class Journal extends Component {
 
           <Col style={{ margin: '0 auto' }}>
             <h3 className="text-center" style={{marginBottom: '20px'}}>Past Journal Entries</h3>
-            <Card body outline color="secondary" className="mt-1" style={{ height: '90vh', overflow: 'hidden', boxShadow: '0 4px 8px 4px rgba(0,0,0,0.4)' }}>
+            <Card body outline color="secondary" className="mt-1" style={{ minHeight: '55vh', overflow: 'hidden', boxShadow: '0 4px 8px 4px rgba(0,0,0,0.4)' }}>
               { listOfPosts }
             </Card>
           </Col>

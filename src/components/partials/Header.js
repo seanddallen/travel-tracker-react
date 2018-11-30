@@ -11,7 +11,7 @@ class Header extends Component {
   render () {
     return (
       <div id="navbar">
-        <Navbar light expand="md" style={{ height: '60px', backgroundColor: 'rgba(0,0,0,0.9' }}>
+        <Navbar light expand="md" style={{ height: '60px', backgroundColor: 'rgba(0,0,0,0.8' }}>
           <div className="ml-5">
             <img src={require("./heartplane-yellow-icon.png")} style={{maxHeight: '6vh', paddingRight: '10px', marginBottom: '5px'}}></img>
             <NavbarBrand style={{fontFamily: '', fontSize: '1.5rem', color: '#FAC10B'}} href="/login">TravTrac</NavbarBrand>
