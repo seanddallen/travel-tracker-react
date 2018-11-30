@@ -10,7 +10,7 @@ class MapUS extends Component {
 
     return (
       <div className="flex">
-        <div id="usmapdiv" style={{ width: '96vw', height: '92vh', marginLeft: '63px' }}></div>
+        <div id="usmapdiv" style={{ width: '96vw', height: '92vh', marginLeft: '63px', marginRight: '-2px', marginTop: '-2px' }}></div>
       </div>
     )
   }

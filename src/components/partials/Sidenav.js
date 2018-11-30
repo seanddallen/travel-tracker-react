@@ -19,43 +19,43 @@ class Sidenav extends Component {
             }
         }}
       >
-          <SideNav.Toggle />
+          <SideNav.Toggle style={{color: 'rgba(0,0,0,0.8)'}} />
           <SideNav.Nav defaultSelected="/account">
               <NavItem eventKey="dashboard/account">
                 <NavIcon>
-                    <i className="fa fa-fw fa-user" style={{ fontSize: '1.75em' }} />
+                    <i className="fa fa-fw fa-user" style={{ fontSize: '1.75em', color: 'rgba(0,0,0,0.8)' }} />
                 </NavIcon>
-                <NavText>
+                <NavText style={{color: 'rgba(0,0,0,0.6)', fontSize: '1.2rem', fontWeight: 'bold'}}>
                     Account
                 </NavText>
               </NavItem>
               <NavItem eventKey="dashboard/progress">
                   <NavIcon>
-                      <i className="fa fa-fw fa-line-chart" style={{ fontSize: '1.75em' }} />
+                      <i className="fa fa-fw fa-line-chart" style={{ fontSize: '1.75em', color: 'rgba(0,0,0,0.8)' }} />
                   </NavIcon>
-                  <NavText>
+                  <NavText style={{color: 'rgba(0,0,0,0.6)', fontSize: '1.2rem', fontWeight: 'bold'}}>
                       Progress
                   </NavText>
               </NavItem>
               <NavItem eventKey="views">
                   <NavIcon>
-                      <i className="fa fa-fw fa-map" style={{ fontSize: '1.75em' }} />
+                      <i className="fa fa-fw fa-map" style={{ fontSize: '1.75em', color: 'rgba(0,0,0,0.8)' }} />
                   </NavIcon>
-                  <NavText>
+                  <NavText style={{color: 'rgba(0,0,0,0.6)', fontSize: '1.2rem', fontWeight: 'bold'}}>
                       Views
                   </NavText>
                   <NavItem eventKey="dashboard/usmap">
-                      <NavText>
+                      <NavText style={{color: 'rgba(0,0,0,0.6)', fontSize: '.9rem', fontWeight: 'bold'}}>
                           Map View (US)
                       </NavText>
                   </NavItem>
                   <NavItem eventKey="dashboard/worldmap">
-                      <NavText>
+                      <NavText style={{color: 'rgba(0,0,0,0.6)', fontSize: '.9rem', fontWeight: 'bold'}}>
                           Map View (World)
                       </NavText>
                   </NavItem>
                   <NavItem eventKey="dashboard/alphabeticlist">
-                      <NavText>
+                      <NavText style={{color: 'rgba(0,0,0,0.6)', fontSize: '.9rem', fontWeight: 'bold'}}>
                           List View (Alphabetic)
                       </NavText>
                   </NavItem>
@@ -67,9 +67,9 @@ class Sidenav extends Component {
               </NavItem>
               <NavItem eventKey="login">
                 <NavIcon>
-                    <i className="fa fa-fw fa-sign-out" style={{ fontSize: '1.75em' }} />
+                    <i className="fa fa-fw fa-sign-out" style={{ fontSize: '1.75em', color: 'rgba(0,0,0,0.8)' }} />
                 </NavIcon>
-                <NavText>
+                <NavText style={{color: 'rgba(0,0,0,0.6)', fontSize: '1.2rem', fontWeight: 'bold'}}>
                     Logout
                 </NavText>
               </NavItem>

@@ -13,7 +13,7 @@ class Login extends Component {
     return (
       <div className="flex-col flex-y-center">
 
-        <Form style={{ border: 'solid 1px rgba(0,0,0,0.4)', borderRadius: '3px', width: '40vw', padding: '40px', marginTop: '5vh' }}>
+        <Form style={{ border: 'solid 1px rgba(0,0,0,0.4)', borderRadius: '3px', width: '40vw', padding: '40px', marginTop: '5vh', boxShadow: '0 2px 8px 2px rgba(0,0,0,0.6)' }}>
           <FormGroup row>
             <Label sm={2}>Email</Label>
             <Col sm={10}>
@@ -27,13 +27,13 @@ class Login extends Component {
             </Col>
           </FormGroup>
           <div className="flex flex-x-center">
-            <Link to={'/dashboard'}>
+            <Link to={'/dashboard/worldmap'}>
               <Button>Login</Button>
             </Link>
           </div>
         </Form>
 
-        <Form style={{ border: 'solid 1px rgba(0,0,0,0.4)', borderRadius: '3px', width: '40vw', padding: '40px', marginTop: '5vh' }}>
+        <Form style={{ border: 'solid 1px rgba(0,0,0,0.4)', borderRadius: '3px', width: '40vw', padding: '40px', marginTop: '5vh', boxShadow: '0 2px 8px 2px rgba(0,0,0,0.6)' }}>
           <FormGroup row>
             <Label sm={2}>Name</Label>
             <Col sm={10}>

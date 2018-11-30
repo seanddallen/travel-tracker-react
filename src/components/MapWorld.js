@@ -11,7 +11,7 @@ class MapWorld extends Component {
     return (
       <div className="flex">
         {/* <AmCharts.React style={{ width: "100%", height: "500px" }} options={config} /> */}
-        <div id="mapdiv" style={{ width: '96vw', height: '92vh', marginLeft: '63px' }}></div>
+        <div id="mapdiv" style={{ width: '96vw', height: '92vh', marginLeft: '63px', marginRight: '-2px', marginTop: '-2px' }}></div>
       </div>
     )
   }
